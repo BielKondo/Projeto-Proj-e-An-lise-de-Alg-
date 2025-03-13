@@ -1,11 +1,16 @@
 #include <stdio.h>
 #include <string.h>
 
+char sequenciaLetras(char *letras);
+
 int main() {
 
     char letras[50];
 
-    scanf("%s", letras);
+    //scanf("%s", letras);
+    sequenciaLetras(letras);
+
+
     for (int i = 0; i < strlen(letras); i++) {
         int cont = 1;
         while (letras[i] == letras[i + 1]) {
@@ -19,6 +24,8 @@ int main() {
         }
     }
 
-    
+}
 
+char sequenciaLetras(char *letras) {
+    strcpy(letras, "abbcccdde");
 }
